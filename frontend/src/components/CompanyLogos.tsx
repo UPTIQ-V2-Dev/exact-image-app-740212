@@ -2,11 +2,11 @@ import { mockTrustedCompanies } from '@/data/mockData';
 
 export const CompanyLogos = () => {
     return (
-        <section className='py-12 px-4 sm:px-6 lg:px-8 bg-gray-50'>
+        <section className='py-12 px-4 sm:px-6 lg:px-8 bg-muted/50'>
             <div className='max-w-7xl mx-auto'>
                 {/* Header */}
                 <div className='text-center mb-8'>
-                    <p className='text-gray-600 text-sm font-medium mb-4'>
+                    <p className='text-muted-foreground text-sm font-medium mb-4'>
                         More than 25,000+ companies worldwide with us
                     </p>
                 </div>
@@ -26,7 +26,7 @@ export const CompanyLogos = () => {
                                     // Fallback to company name if logo fails to load
                                     e.currentTarget.style.display = 'none';
                                     const fallback = document.createElement('div');
-                                    fallback.className = 'text-gray-400 font-semibold text-lg capitalize';
+                                    fallback.className = 'text-muted-foreground font-semibold text-lg capitalize';
                                     fallback.textContent = company;
                                     e.currentTarget.parentNode?.appendChild(fallback);
                                 }}
@@ -38,7 +38,7 @@ export const CompanyLogos = () => {
                 {/* Reviews Section */}
                 <div className='mt-16'>
                     <div className='text-center mb-8'>
-                        <h3 className='text-2xl font-bold text-gray-900 mb-2'>
+                        <h3 className='text-2xl font-bold text-foreground mb-2'>
                             Reviews of People Who Have
                             <br />
                             Found Jobs Through Chakri
@@ -52,7 +52,7 @@ export const CompanyLogos = () => {
                             {[...Array(5)].map((_, i) => (
                                 <svg
                                     key={i}
-                                    className='w-6 h-6 text-yellow-400 fill-current'
+                                    className='w-6 h-6 text-primary fill-current'
                                     viewBox='0 0 20 20'
                                 >
                                     <path d='M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z' />
@@ -61,7 +61,7 @@ export const CompanyLogos = () => {
                         </div>
 
                         {/* Rating Text */}
-                        <p className='text-lg font-semibold text-gray-900'>Great 4.8 out of 5</p>
+                        <p className='text-lg font-semibold text-foreground'>Great 4.8 out of 5</p>
 
                         {/* User Avatars */}
                         <div className='flex items-center'>
@@ -69,11 +69,11 @@ export const CompanyLogos = () => {
                                 {[...Array(5)].map((_, i) => (
                                     <div
                                         key={i}
-                                        className='w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-white'
+                                        className='w-8 h-8 rounded-full bg-gradient-to-br from-primary/60 to-primary border-2 border-background'
                                     ></div>
                                 ))}
                             </div>
-                            <span className='ml-3 text-sm text-gray-600'>Based on 892 reviews</span>
+                            <span className='ml-3 text-sm text-muted-foreground'>Based on 892 reviews</span>
                         </div>
                     </div>
                 </div>

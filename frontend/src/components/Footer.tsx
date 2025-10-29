@@ -5,16 +5,16 @@ import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 export const Footer = () => {
     return (
-        <footer className='bg-gray-900 text-white'>
+        <footer className='bg-background text-foreground'>
             {/* Newsletter Section */}
-            <div className='bg-blue-600 py-12'>
+            <div className='bg-primary py-12'>
                 <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                     <div className='flex flex-col md:flex-row items-center justify-between gap-6'>
                         <div>
-                            <h3 className='text-2xl font-bold mb-2'>
+                            <h3 className='text-2xl font-bold mb-2 text-primary-foreground'>
                                 Never Want to Miss
                                 <br />
-                                Any <span className='text-blue-200'>Job News?</span>
+                                Any <span className='text-primary-foreground/80'>Job News?</span>
                             </h3>
                         </div>
 
@@ -22,9 +22,11 @@ export const Footer = () => {
                             <Input
                                 type='email'
                                 placeholder='Enter your email address'
-                                className='bg-white text-gray-900 border-0 flex-1'
+                                className='bg-background text-foreground border-0 flex-1'
                             />
-                            <Button className='bg-gray-900 hover:bg-gray-800 text-white px-6'>Subscribe</Button>
+                            <Button className='bg-secondary hover:bg-secondary/90 text-secondary-foreground px-6'>
+                                Subscribe
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -42,32 +44,32 @@ export const Footer = () => {
                             >
                                 <span className='text-2xl font-bold'>Chakri</span>
                             </Link>
-                            <p className='text-gray-400 mb-6 leading-relaxed'>
+                            <p className='text-muted-foreground mb-6 leading-relaxed'>
                                 Your trusted partner in finding the right career opportunities. Connect with top
                                 employers and discover your next career move.
                             </p>
                             <div className='flex space-x-4'>
                                 <Link
                                     to='#'
-                                    className='text-gray-400 hover:text-white transition-colors'
+                                    className='text-muted-foreground hover:text-foreground transition-colors'
                                 >
                                     <Facebook className='w-5 h-5' />
                                 </Link>
                                 <Link
                                     to='#'
-                                    className='text-gray-400 hover:text-white transition-colors'
+                                    className='text-muted-foreground hover:text-foreground transition-colors'
                                 >
                                     <Twitter className='w-5 h-5' />
                                 </Link>
                                 <Link
                                     to='#'
-                                    className='text-gray-400 hover:text-white transition-colors'
+                                    className='text-muted-foreground hover:text-foreground transition-colors'
                                 >
                                     <Linkedin className='w-5 h-5' />
                                 </Link>
                                 <Link
                                     to='#'
-                                    className='text-gray-400 hover:text-white transition-colors'
+                                    className='text-muted-foreground hover:text-foreground transition-colors'
                                 >
                                     <Instagram className='w-5 h-5' />
                                 </Link>
@@ -81,7 +83,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/jobs'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Browse Jobs
                                     </Link>
@@ -89,7 +91,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/companies'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Browse Companies
                                     </Link>
@@ -97,7 +99,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/salary-guide'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Salary Guide
                                     </Link>
@@ -105,7 +107,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/career-advice'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Career Advice
                                     </Link>
@@ -120,7 +122,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/post-job'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Post a Job
                                     </Link>
@@ -128,7 +130,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/browse-resumes'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Browse Resumes
                                     </Link>
@@ -136,7 +138,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/employer-resources'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Employer Resources
                                     </Link>
@@ -144,7 +146,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/pricing'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Pricing
                                     </Link>
@@ -159,7 +161,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/about'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         About Us
                                     </Link>
@@ -167,7 +169,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/contact'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Contact Us
                                     </Link>
@@ -175,7 +177,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/faq'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         FAQ
                                     </Link>
@@ -183,7 +185,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/blog'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Blog
                                     </Link>
@@ -198,7 +200,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/privacy-policy'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Privacy Policy
                                     </Link>
@@ -206,7 +208,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/terms-of-service'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Terms of Service
                                     </Link>
@@ -214,7 +216,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/cookie-policy'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Cookie Policy
                                     </Link>
@@ -222,7 +224,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/sitemap'
-                                        className='text-gray-400 hover:text-white transition-colors'
+                                        className='text-muted-foreground hover:text-foreground transition-colors'
                                     >
                                         Sitemap
                                     </Link>
@@ -234,10 +236,12 @@ export const Footer = () => {
             </div>
 
             {/* Bottom Bar */}
-            <div className='border-t border-gray-800 py-6 px-4 sm:px-6 lg:px-8'>
+            <div className='border-t border-border py-6 px-4 sm:px-6 lg:px-8'>
                 <div className='max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between'>
-                    <p className='text-gray-400 text-sm'>© {new Date().getFullYear()} Chakri. All rights reserved.</p>
-                    <p className='text-gray-400 text-sm mt-2 md:mt-0'>Made with ❤️ for job seekers worldwide</p>
+                    <p className='text-muted-foreground text-sm'>
+                        © {new Date().getFullYear()} Chakri. All rights reserved.
+                    </p>
+                    <p className='text-muted-foreground text-sm mt-2 md:mt-0'>Made with ❤️ for job seekers worldwide</p>
                 </div>
             </div>
         </footer>

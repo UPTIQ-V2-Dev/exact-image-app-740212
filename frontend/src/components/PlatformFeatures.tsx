@@ -20,13 +20,13 @@ export const PlatformFeatures = () => {
 
     if (isLoading) {
         return (
-            <section className='py-16 px-4 sm:px-6 lg:px-8 bg-gray-50'>
+            <section className='py-16 px-4 sm:px-6 lg:px-8 bg-muted/50'>
                 <div className='max-w-7xl mx-auto'>
                     <div className='text-center mb-12'>
-                        <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+                        <h2 className='text-3xl font-bold text-foreground mb-4'>
                             One Platform
                             <br />
-                            Many <span className='text-blue-600'>Solutions</span>
+                            Many <span className='text-primary'>Solutions</span>
                         </h2>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -35,10 +35,10 @@ export const PlatformFeatures = () => {
                                 key={index}
                                 className='p-6 animate-pulse'
                             >
-                                <div className='w-12 h-12 bg-gray-200 rounded-lg mb-4'></div>
-                                <div className='h-4 bg-gray-200 rounded mb-2'></div>
-                                <div className='h-3 bg-gray-200 rounded mb-2'></div>
-                                <div className='h-3 bg-gray-200 rounded w-16'></div>
+                                <div className='w-12 h-12 bg-muted rounded-lg mb-4'></div>
+                                <div className='h-4 bg-muted rounded mb-2'></div>
+                                <div className='h-3 bg-muted rounded mb-2'></div>
+                                <div className='h-3 bg-muted rounded w-16'></div>
                             </Card>
                         ))}
                     </div>
@@ -48,14 +48,14 @@ export const PlatformFeatures = () => {
     }
 
     return (
-        <section className='py-16 px-4 sm:px-6 lg:px-8 bg-gray-50'>
+        <section className='py-16 px-4 sm:px-6 lg:px-8 bg-muted/50'>
             <div className='max-w-7xl mx-auto'>
                 {/* Section Header */}
                 <div className='text-center mb-12'>
-                    <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+                    <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-4'>
                         One Platform
                         <br />
-                        Many <span className='text-blue-600'>Solutions</span>
+                        Many <span className='text-primary'>Solutions</span>
                     </h2>
                 </div>
 
@@ -67,7 +67,7 @@ export const PlatformFeatures = () => {
                         return (
                             <Card
                                 key={category.id}
-                                className='p-6 hover:shadow-lg transition-shadow cursor-pointer border-0 bg-white'
+                                className='p-6 hover:shadow-lg transition-shadow cursor-pointer border-0 bg-card'
                             >
                                 <CardContent className='p-0'>
                                     {/* Icon */}
@@ -79,15 +79,15 @@ export const PlatformFeatures = () => {
 
                                     {/* Category Name */}
                                     <h3
-                                        className='text-lg font-semibold text-gray-900 mb-2'
+                                        className='text-lg font-semibold text-card-foreground mb-2'
                                         dangerouslySetInnerHTML={{ __html: category.name }}
                                     />
 
                                     {/* Description */}
-                                    <p className='text-gray-600 text-sm mb-3'>{category.description}</p>
+                                    <p className='text-muted-foreground text-sm mb-3'>{category.description}</p>
 
                                     {/* Job Count */}
-                                    <p className='text-blue-600 font-medium text-sm'>
+                                    <p className='text-primary font-medium text-sm'>
                                         {category.jobCount.toLocaleString()} Open position
                                     </p>
                                 </CardContent>
@@ -98,7 +98,7 @@ export const PlatformFeatures = () => {
 
                 {/* View All Button */}
                 <div className='text-center mt-12'>
-                    <button className='text-blue-600 hover:text-blue-700 font-medium text-lg hover:underline transition-colors'>
+                    <button className='text-primary hover:text-primary/80 font-medium text-lg hover:underline transition-colors'>
                         View All Categories →
                     </button>
                 </div>

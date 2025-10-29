@@ -13,11 +13,11 @@ export const JobCirculars = () => {
 
     if (isLoading) {
         return (
-            <section className='py-16 px-4 sm:px-6 lg:px-8 bg-white'>
+            <section className='py-16 px-4 sm:px-6 lg:px-8 bg-background'>
                 <div className='max-w-7xl mx-auto'>
                     <div className='text-center mb-12'>
-                        <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-                            Featured Job <span className='text-blue-600'>Circulars</span>
+                        <h2 className='text-3xl font-bold text-foreground mb-4'>
+                            Featured Job <span className='text-primary'>Circulars</span>
                         </h2>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
@@ -27,15 +27,15 @@ export const JobCirculars = () => {
                                 className='p-4 animate-pulse'
                             >
                                 <div className='flex items-center gap-3 mb-4'>
-                                    <div className='w-12 h-12 bg-gray-200 rounded-lg'></div>
+                                    <div className='w-12 h-12 bg-muted rounded-lg'></div>
                                     <div className='flex-1'>
-                                        <div className='h-4 bg-gray-200 rounded mb-2'></div>
-                                        <div className='h-3 bg-gray-200 rounded w-20'></div>
+                                        <div className='h-4 bg-muted rounded mb-2'></div>
+                                        <div className='h-3 bg-muted rounded w-20'></div>
                                     </div>
                                 </div>
-                                <div className='h-4 bg-gray-200 rounded mb-2'></div>
-                                <div className='h-3 bg-gray-200 rounded mb-4'></div>
-                                <div className='h-8 bg-gray-200 rounded'></div>
+                                <div className='h-4 bg-muted rounded mb-2'></div>
+                                <div className='h-3 bg-muted rounded mb-4'></div>
+                                <div className='h-8 bg-muted rounded'></div>
                             </Card>
                         ))}
                     </div>
@@ -45,12 +45,12 @@ export const JobCirculars = () => {
     }
 
     return (
-        <section className='py-16 px-4 sm:px-6 lg:px-8 bg-white'>
+        <section className='py-16 px-4 sm:px-6 lg:px-8 bg-background'>
             <div className='max-w-7xl mx-auto'>
                 {/* Section Header */}
                 <div className='text-center mb-12'>
-                    <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-                        Featured Job <span className='text-blue-600'>Circulars</span>
+                    <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-4'>
+                        Featured Job <span className='text-primary'>Circulars</span>
                     </h2>
                 </div>
 
@@ -59,12 +59,12 @@ export const JobCirculars = () => {
                     {jobs?.slice(0, 8).map(job => (
                         <Card
                             key={job.id}
-                            className='p-4 hover:shadow-lg transition-shadow border border-gray-200'
+                            className='p-4 hover:shadow-lg transition-shadow border border-border'
                         >
                             <CardContent className='p-0'>
                                 {/* Company Logo and Info */}
                                 <div className='flex items-center gap-3 mb-4'>
-                                    <div className='w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center'>
+                                    <div className='w-12 h-12 bg-muted rounded-lg flex items-center justify-center'>
                                         <img
                                             src={job.company.logo}
                                             alt={job.company.name}
@@ -75,32 +75,34 @@ export const JobCirculars = () => {
                                                     job.company.name.charAt(0);
                                             }}
                                         />
-                                        <span className='font-semibold text-gray-600 hidden'>
+                                        <span className='font-semibold text-muted-foreground hidden'>
                                             {job.company.name.charAt(0)}
                                         </span>
                                     </div>
                                     <div className='flex-1 min-w-0'>
-                                        <h3 className='font-semibold text-gray-900 text-sm truncate'>
+                                        <h3 className='font-semibold text-card-foreground text-sm truncate'>
                                             {job.company.name}
                                         </h3>
-                                        <p className='text-xs text-gray-500'>{job.company.industry}</p>
+                                        <p className='text-xs text-muted-foreground'>{job.company.industry}</p>
                                     </div>
                                 </div>
 
                                 {/* Job Title */}
-                                <h4 className='font-semibold text-gray-900 mb-2 text-sm leading-tight'>{job.title}</h4>
+                                <h4 className='font-semibold text-card-foreground mb-2 text-sm leading-tight'>
+                                    {job.title}
+                                </h4>
 
                                 {/* Job Details */}
                                 <div className='space-y-1 mb-4'>
-                                    <div className='flex items-center gap-2 text-xs text-gray-500'>
+                                    <div className='flex items-center gap-2 text-xs text-muted-foreground'>
                                         <MapPin className='w-3 h-3' />
                                         <span>{job.location}</span>
                                     </div>
-                                    <div className='flex items-center gap-2 text-xs text-gray-500'>
+                                    <div className='flex items-center gap-2 text-xs text-muted-foreground'>
                                         <DollarSign className='w-3 h-3' />
                                         <span>{job.salary}</span>
                                     </div>
-                                    <div className='flex items-center gap-2 text-xs text-gray-500'>
+                                    <div className='flex items-center gap-2 text-xs text-muted-foreground'>
                                         <Clock className='w-3 h-3' />
                                         <span>Deadline: {job.deadline}</span>
                                     </div>
@@ -111,7 +113,7 @@ export const JobCirculars = () => {
                                     asChild
                                     variant='outline'
                                     size='sm'
-                                    className='w-full text-blue-600 border-blue-600 hover:bg-blue-50'
+                                    className='w-full text-primary border-primary hover:bg-primary/10'
                                 >
                                     <Link to={`/jobs/${job.id}`}>View Details</Link>
                                 </Button>

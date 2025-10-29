@@ -10,14 +10,14 @@ interface ComingSoonPageProps {
 
 export const ComingSoonPage = ({ title, description }: ComingSoonPageProps) => {
     return (
-        <div className='min-h-screen bg-white flex flex-col'>
+        <div className='min-h-screen bg-background flex flex-col'>
             <Header />
             <main className='flex-1 flex items-center justify-center px-4 py-16'>
                 <div className='text-center max-w-md'>
                     <div className='mb-8'>
-                        <div className='w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6'>
+                        <div className='w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6'>
                             <svg
-                                className='w-12 h-12 text-blue-600'
+                                className='w-12 h-12 text-primary'
                                 fill='none'
                                 stroke='currentColor'
                                 viewBox='0 0 24 24'
@@ -30,8 +30,8 @@ export const ComingSoonPage = ({ title, description }: ComingSoonPageProps) => {
                                 />
                             </svg>
                         </div>
-                        <h1 className='text-3xl font-bold text-gray-900 mb-4'>{title}</h1>
-                        <p className='text-gray-600 mb-8'>
+                        <h1 className='text-3xl font-bold text-foreground mb-4'>{title}</h1>
+                        <p className='text-muted-foreground mb-8'>
                             {description ||
                                 `The ${title.toLowerCase()} page is coming soon. We're working hard to bring you this feature.`}
                         </p>
@@ -44,7 +44,7 @@ export const ComingSoonPage = ({ title, description }: ComingSoonPageProps) => {
                         >
                             <Link to='/'>Back to Home</Link>
                         </Button>
-                        <p className='text-sm text-gray-500'>Stay tuned for updates!</p>
+                        <p className='text-sm text-muted-foreground'>Stay tuned for updates!</p>
                     </div>
                 </div>
             </main>
